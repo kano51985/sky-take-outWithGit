@@ -6,3 +6,8 @@ sky:
     database: sky_take_out
     username: root
     password: mcxiaodandan153+
+  alioss:
+    access-key-id: LTAI5tDgZ1GuaFAwSA1n5kPq
+    access-key-secret: GsgKvi70eqEPIvhoboCsvmAMcjMF1B
+    bucket-name: lovesana
+    endpoint: oss-cn-beijing.aliyuncs.com

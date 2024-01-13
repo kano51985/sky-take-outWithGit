@@ -10,4 +10,11 @@
             (#{df.dishId},#{df.name},#{df.value})
         </foreach>
     </insert>
+<!--    collection里写dao接口方法的形参名-->
+    <delete id="deleteByDishIds">
+        delete from dish_flavor where dish_id in
+        <foreach collection="dishIds" open="(" close=")" separator="," item="id">
+            #{id}
+        </foreach>
+    </delete>
 </mapper>

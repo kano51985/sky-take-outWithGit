@@ -27,14 +27,16 @@ public class ShopController {
     public Result setStatus(@PathVariable Integer status){
         log.info("设置商店营业状态为：{}",status == StatusConstant.ENABLE ? "营业中" : "打烊中");
         redisTemplate.opsForValue().set("SHOP_STATUS",status);
-        return Result.success();
+        log.info("商店状态已设置为：{}", redisTemplate.opsForValue().get("SHOP_STATUS"));
+        return Result.success(status);
     }
 
     @ApiOperation("获取商店营业状态")
     @GetMapping("/status")
     public Result<Integer> getStatus(){
         Integer status = (Integer) redisTemplate.opsForValue().get("SHOP_STATUS");
-        log.info("获取商店营业状态为：{}",status == StatusConstant.ENABLE ? "营业中" : "打烊中");
+        System.out.println("商店状态码："+status);
+//        log.info("获取商店营业状态为：{}",status == StatusConstant.ENABLE ? "营业中" : "打烊中");
         return Result.success(status);
     }
 }

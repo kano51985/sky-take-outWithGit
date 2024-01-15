@@ -11,3 +11,6 @@ sky:
     access-key-secret: GsgKvi70eqEPIvhoboCsvmAMcjMF1B
     bucket-name: lovesana
     endpoint: oss-cn-beijing.aliyuncs.com
+  wechat:
+    appid: wxf26a969cc9e71657
+    secret: 490ae63cc62353e307840fc2a142bbff
